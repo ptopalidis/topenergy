@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Δήλωση απόδοσης</title>
+        <style>
+            *{
+                font-family: "Segoe UI";
+            }
+            td,tr{
+                border:none;
+            }
+            .borderedCell{
+                border:2px solid black;
+                font-size: 0.8rem;
+            }
+            table{
+                table-layout: fixed;
+                border:none;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <img src='<%= user.logo %>' style="width: 20rem;height: 10rem;"/>
+                    </td>
+                    <td>
+                        <p><b><%= new Date(report.date).toDateString() %></b></p>                   
+                    </td>
+                </tr>
+            </table>
+        
+        </div>
+        <table style="width:100%;height:5rem; background-color:lightgray; table-layout: fixed;">
+     
+            <tr>
+                <td style="width:2%;background-color:black; "></td>
+                <td style="width:2%;background-color:gray;"></td>
+                <td style="width:30%;background-color:lightgray;">
+                    <p style="font-size: 1.5rem; margin-left: 2rem;">ΔΗΛΩΣΗ ΕΠΙΔΟΣΕΩΝ</p>
+                    <p style="font-size: 1rem; margin-left: 2rem;"">DOP-<%= report.code %></p>
+                    <p style="font-size: 1rem; margin-left: 2rem;"">Προϊόν: <%= glass.name %></p>
+                </td>
+                <td style="width:30%;background-color:lightgray; text-align: right;">
+                    <img  src="https://www.arrascf.eu/wp-content/uploads/2019/02/ce-marking.png" style="width: 10rem; height: 7rem;"/>
+                </td>
+            </tr>
+
+        </table>
+
+        <table style="width:100%; text-align: left;">
+
+            <tr>
+                <td>1. Μοναδικός κωδικός ταυτοποίησης προϊόντος</td>
+                <td style="background-color:lightgray;"><%= report.code %></td>
+            </tr>
+
+            <tr>
+                <td>2. Προτεινόμενη χρήση ή χρήσεις προϊόντος</td>
+                <td style="background-color:lightgray;">Διπλοί μονωτικοί υολοπίνακες που πρόκειται να
+                    χρησιμοποιηθούν σε κτήρια και κατασκευαστικά έργα</td>
+            </tr>
+
+            <tr>
+                <td>3. Κατασκευαστής, εμπορική επωνυμία</td>
+                <td><%= user.name + " - "  + user.address%></td>
+            </tr>
+
+            <tr>
+                <td>4. Εξουσιοδοτημένος αντιπρόσωπος</td>
+                <td style="background-color:lightgray;">_</td>
+            </tr>
+
+            <tr>
+                <td>5. Σύστημα αξιολόγησης επιδόσεων</td>
+                <td>Σύστημα 3</td>
+            </tr>
+
+            <tr>
+                <td>6α. Εναρμονισμένο πρότυπο</td>
+                <td style="background-color:lightgray;">Βάσει του προτύπου ΕΝ 1279-5:2018, σύστημα 3<br> ITT IKATES s.r.o. (NB 1394)</td>
+            
+            </tr>
+            
+            <tr>
+                <td>6β. Ευρωπαϊκή τεχνική αξιολόγηση</td>
+                <td>Δεν εφαρμόζεται</td>
+            </tr>
+
+            <tr>
+                <td>7. Δηλωθείσα απόδοση</td>
+                <td style="background-color:lightgray;"></td>
+            </tr>
+        </table>
+
+        <table style="border: 2px solid black; width: 100%;table-layout: fixed;text-align: center;">
+            <th style="width:5%;"></th>
+            <th style="width:35%;">ΙΔΙΟΤΗΤΑ</th>
+            <th style="width:30%;">ΕΝΑΡΜΟΝΙΣΜΕΝΗ ΤΕΧΝΙΚΗ</th>
+            <th style="width:10%;"></th>
+            <th style="width:20%;">ΑΠΟΔΟΣΗ</th>
+
+            <tr>
+                <td class="borderedCell">1</td>
+                <td class="borderedCell">Αντίσταση στην φωτιά</td>
+                <td class="borderedCell">EN-13501-2</td>
+                <td class="borderedCell">Κλάση</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            
+            <tr>
+                <td class="borderedCell">2</td>
+                <td class="borderedCell">Αντίδραση στην φωτιά</td>
+                <td class="borderedCell">EN-13501-1</td>
+                <td class="borderedCell">Κλάση</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">3</td>
+                <td class="borderedCell">Αντίσταση σε εξωτερική φωτιά</td>
+                <td class="borderedCell">ΕΝ 1279-5</td>
+                <td class="borderedCell">Κλάση</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">4</td>
+                <td class="borderedCell">Αντίσταση σε σφαίρα</td>
+                <td class="borderedCell">EN 1063</td>
+                <td class="borderedCell">Κλάση</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">5</td>
+                <td class="borderedCell">Αντίσταση σε έκρηξη</td>
+                <td class="borderedCell">EN 13541</td>
+                <td class="borderedCell">Κλάση</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">6</td>
+                <td class="borderedCell">Αντίσταση σε διάρηξη </td>
+                <td class="borderedCell">EN 356</td>
+                <td class="borderedCell">Κλάση</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">7</td>
+                <td class="borderedCell">Αντίσταση σε κρούση εκκρεμών αντικειμένων</td>
+                <td class="borderedCell">EN 12600</td>
+                <td class="borderedCell">Κλάση</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">8</td>
+                <td class="borderedCell">Αντίσταση κατά ξαφνικών αλλαγών θερμοκρασίας</td>
+                <td class="borderedCell">EN 572</td>
+                <td class="borderedCell">[<sup>0</sup>K]</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">9</td>
+                <td class="borderedCell">Μόνιμη επιβαλλόμενη ανεμοπίεση και πίεση</td>
+                <td class="borderedCell">ΕΝ 1279-5</td>
+                <td class="borderedCell">mm</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">10</td>
+                <td class="borderedCell">Μόνωση κατά απευθείας αερομεταφερομένου</td>
+                <td class="borderedCell">EN 12758</td>
+                <td class="borderedCell">dB</td>
+                <td class="borderedCell">npd</td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">11</td>
+                <td class="borderedCell">Θερμικές ιδιότητες.Συντελεστής</td>
+                <td class="borderedCell">EN 673</td>
+                <td class="borderedCell">W/m<sup>2</sup>K</td>
+                <td class="borderedCell"><%= glass.ug %></td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">12</td>
+                <td class="borderedCell">Μετάδοση φωτός / αντανάκλαση φωτός</td>
+                <td class="borderedCell">EN 410</td>
+                <td class="borderedCell">%</td>
+                <td class="borderedCell"><%= glass.lt %></td>
+            </tr>
+
+            <tr>
+                <td class="borderedCell">13</td>
+                <td class="borderedCell">Μετάδοση Ηλιακής ενέργειας / Αντανάκλαση Ηλιακής ενέργειας / Ηλιακός συντελεστής </td>
+                <td class="borderedCell">EN 410</td>
+                <td class="borderedCell">%</td>
+                <td class="borderedCell"><%= glass.g %></td>
+            </tr>
+        </table>
+        <div>
+            <p>8.Αν έχει χρησιμοποιηθεί ειδική τεχνική τεκμηρίωση σύμφωνα με το άρθρο 37 ή 38, οι απαιτήσεις προς τις οποίες</p>
+        </div>
+        <div style="background-color: lightgray;">
+            <p>Δεν εφαρμόζεται</p>
+        </div>
+        <div>
+            <p>Η επίδοση του προϊόντος που ταυτοποιείται ανωτέρω είναι σύμφωνη με τη
+                (τις) δηλωθείσα(-ες) επίδοση(-εις). Η δήλωση αυτή των επιδόσεων συντάσσεται, σύμφωνα με τον κανονισμό (ΕΕ) αριθ. 305/2011, με αποκλειστική
+                ευθύνη του κατασκευαστή που ταυτοποιείται ανωτέρω.</p>
+        </div>
+        <div>
+            <p><b>Σφραγίδα και υπογραφή κατασκευαστή:</b></p>
+        </div>
+
+
+        <table style="width: 100%;text-align: center;">
+            <tr>
+                <td>Ονοματεπώνυμο και ιδιότητα</td>
+                <td>Υπογραφή</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
