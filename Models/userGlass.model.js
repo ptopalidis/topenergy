@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 
 
-const glassSchema = new mongoose.Schema({
+const  userGlassSchema = new mongoose.Schema({
 
 
     name:{
@@ -23,4 +23,4 @@ const glassSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model("Glass",glassSchema, "Glasses");
+module.exports = mongoose.model("UserGlass",userGlassSchema, "UserGlasses");

@@ -9,7 +9,9 @@ var wkhtmltopdf = require('wkhtmltopdf');
 const nodemailer = require("nodemailer")
 const jsreport = require('@jsreport/jsreport-core')()
 jsreport.use(require('@jsreport/jsreport-ejs')())
-jsreport.use(require('@jsreport/jsreport-chrome-pdf')())
+//jsreport.use(require('@jsreport/jsreport-chrome-pdf')())
+
+jsreport.use(require('@jsreport/jsreport-phantom-pdf')())
 jsreport.init()
 
 exports.postReport = async(req,res)=>{
@@ -77,7 +79,7 @@ exports.reportPDF = async(req,res)=>{
             template: {
                 content: result,
                 engine: 'ejs',
-                recipe: 'chrome-pdf',
+                recipe: 'phantom-pdf',
                 chrome:{
                     format:'A4',
                     marginTop: '0.25in',

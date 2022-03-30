@@ -8,6 +8,6 @@ const glassControllers = require("../Controllers/glass.controller");
 router.get("/all",glassControllers.getAllGlasses)
 router.get("/",glassControllers.getGlasses);
 router.post("/",glassControllers.postGlass);
-
+router.post("/userGlass",glassControllers.postUserGlass);
 
 module.exports = router;
