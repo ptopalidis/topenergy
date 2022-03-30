@@ -79,6 +79,7 @@ exports.reportPDF = async(req,res)=>{
                 engine: 'ejs',
                 recipe: 'chrome-pdf',
                 chrome:{
+                    timeout:"600000",
                     format:'A4',
                     marginTop: '0.25in',
                     marginRight: '0.5in',
