@@ -92,7 +92,13 @@ exports.reportPDF = async(req,res)=>{
             res.send(out.content)
         });*/
     
-        
+        if(err){
+            console.log(err)
+            res.send({error:err})
+            return;
+        }
+        res.setHeader('Content-type', 'application/pdf');
+        res.setHeader('Content-Disposition', 'attachment; filename='+"report.pdf"+';');
         wkhtmltopdf(result).pipe(res);
     })
 }

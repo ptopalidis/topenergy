@@ -15,18 +15,13 @@
             }
             .borderedCell{
                 border:2px solid black;
-                font-size: 0.7rem;
+                font-size: 0.8rem;
             }
             table{
                 table-layout: fixed;
                 border:none;
             }
-            .smallText{
-                font-size: 0.7rem;
-            }
-            th,td{
-                font-size: 0.7rem;
-            }
+            
         </style>
 
     </head>
@@ -36,7 +31,7 @@
             <table>
                 <tr>
                     <td>
-                        <img src='<%= user.logo %>' style="width: 14rem;height: 7rem;"/>
+                        <img src='<%= user.logo %>' style="width: 20rem;height: 10rem;"/>
                     </td>
                     <td>
                         <p><b><%= new Date(report.date).toDateString() %></b></p>                   
@@ -51,12 +46,12 @@
                 <td style="width:2%;background-color:black; "></td>
                 <td style="width:2%;background-color:gray;"></td>
                 <td style="width:30%;background-color:lightgray;">
-                    <p style="font-size: 1rem; margin-left: 2rem;">ΔΗΛΩΣΗ ΕΠΙΔΟΣΕΩΝ</p>
-                    <p style="font-size: 0.8rem; margin-left: 2rem;"">DOP-<%= report.code %></p>
-                    <p style="font-size: 0.8rem; margin-left: 2rem;"">Προϊόν: <%= glass.name %></p>
+                    <p style="font-size: 1.5rem; margin-left: 2rem;">ΔΗΛΩΣΗ ΕΠΙΔΟΣΕΩΝ</p>
+                    <p style="font-size: 1rem; margin-left: 2rem;"">DOP-<%= report.code %></p>
+                    <p style="font-size: 1rem; margin-left: 2rem;"">Προϊόν: <%= glass.name %></p>
                 </td>
                 <td style="width:30%;background-color:lightgray; text-align: right;">
-                    <img  src="https://www.arrascf.eu/wp-content/uploads/2019/02/ce-marking.png" style="width: 7rem; height: 5rem;"/>
+                    <img  src="https://www.arrascf.eu/wp-content/uploads/2019/02/ce-marking.png" style="width: 10rem; height: 7rem;"/>
                 </td>
             </tr>
 
@@ -220,25 +215,25 @@
             </tr>
         </table>
         <div>
-            <p class="smallText">8.Αν έχει χρησιμοποιηθεί ειδική τεχνική τεκμηρίωση σύμφωνα με το άρθρο 37 ή 38, οι απαιτήσεις προς τις οποίες</p>
+            <p>8.Αν έχει χρησιμοποιηθεί ειδική τεχνική τεκμηρίωση σύμφωνα με το άρθρο 37 ή 38, οι απαιτήσεις προς τις οποίες</p>
         </div>
         <div style="background-color: lightgray;">
-            <p class="smallText">Δεν εφαρμόζεται</p>
+            <p>Δεν εφαρμόζεται</p>
         </div>
         <div>
-            <p class="smallText">Η επίδοση του προϊόντος που ταυτοποιείται ανωτέρω είναι σύμφωνη με τη
+            <p>Η επίδοση του προϊόντος που ταυτοποιείται ανωτέρω είναι σύμφωνη με τη
                 (τις) δηλωθείσα(-ες) επίδοση(-εις). Η δήλωση αυτή των επιδόσεων συντάσσεται, σύμφωνα με τον κανονισμό (ΕΕ) αριθ. 305/2011, με αποκλειστική
                 ευθύνη του κατασκευαστή που ταυτοποιείται ανωτέρω.</p>
         </div>
         <div>
-            <p class="smallText"><b>Σφραγίδα και υπογραφή κατασκευαστή:</b></p>
+            <p><b>Σφραγίδα και υπογραφή κατασκευαστή:</b></p>
         </div>
 
 
         <table style="width: 100%;text-align: center;">
             <tr>
-                <td class="smallText">Ονοματεπώνυμο και ιδιότητα</td>
-                <td class="smallText">Υπογραφή</td>
+                <td>Ονοματεπώνυμο και ιδιότητα</td>
+                <td>Υπογραφή</td>
             </tr>
         </table>
 
