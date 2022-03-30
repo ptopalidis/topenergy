@@ -3,6 +3,7 @@ const ReportModel = require("../Models/report.model");
 const GlassModel = require("../Models/glass.model")
 const UserModel = require("../Models/user.model")
 //Libraries
+const fs =require("fs")
 const ejs = require('ejs');
 const path = require("path");
 var wkhtmltopdf = require('wkhtmltopdf');
@@ -60,10 +61,9 @@ exports.reportPDF = async(req,res)=>{
     var glass = await GlassModel.findOne({_id:report.glass});
     var user = await UserModel.findOne({_id:report.user})
 
-    console.log("RENDER")
-    console.log(report)
-    console.log(glass)
-    console.log(user)
+  
+
+   // res.sendFile("tmp.pdf")
     ejs.renderFile(path.join(__dirname,"..","Templates","reportTemplate.ejs"),{report:report,glass:glass,user:user},(err,result)=>{
         /*if(err){
             console.log(err)
@@ -92,9 +92,9 @@ exports.reportPDF = async(req,res)=>{
             res.send(out.content)
         });*/
     
-        if(err){
+       if(err){
             console.log(err)
-            res.send({error:err})
+           res.send({error:err})
             return;
         }
         res.setHeader('Content-type', 'application/pdf');

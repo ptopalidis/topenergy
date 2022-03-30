@@ -7,7 +7,7 @@ const reportController = require("../Controllers/report.controller");
 
 
 router.post("/",reportController.postReport);
-router.post("/:reportID/pdf",reportController.reportPDF);
+router.get("/:reportID/pdf",reportController.reportPDF);
 router.post("/:reportID/email",reportController.reportEmail);
 router.get("/all",reportController.getAllReports);
 router.get("/:reportID",reportController.getReport)
