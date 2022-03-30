@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_297ae74e-d426-463f-90be-6d0d5eee1942",
+      "org_id": "user_1d433204-cffc-45d1-ac54-b22bcedb697d",
+      "deploy_url": "https://github.com/ptopalidis/topenergy.git",
+      "name": "topenergy",
+      "alias": "topenergy"
+    }
+  ]
+}

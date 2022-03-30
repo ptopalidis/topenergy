@@ -65,7 +65,7 @@ exports.reportPDF = async(req,res)=>{
     console.log(glass)
     console.log(user)
     ejs.renderFile(path.join(__dirname,"..","Templates","reportTemplate.ejs"),{report:report,glass:glass,user:user},(err,result)=>{
-        if(err){
+        /*if(err){
             console.log(err)
             res.send({error:err})
             return;
@@ -90,10 +90,10 @@ exports.reportPDF = async(req,res)=>{
             data: { name: 'jsreport' }
         }).then((out) => {
             res.send(out.content)
-        });
+        });*/
     
         
-       // wkhtmltopdf(result).pipe(res);
+        wkhtmltopdf(result).pipe(res);
     })
 }
 
