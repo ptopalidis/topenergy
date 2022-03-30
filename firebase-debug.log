@@ -1,0 +1,233 @@
+[debug] [2022-02-16T13:22:07.393Z] ----------------------------------------------------------------------
+[debug] [2022-02-16T13:22:07.395Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-02-16T13:22:07.396Z] CLI Version:   10.2.0
+[debug] [2022-02-16T13:22:07.396Z] Platform:      win32
+[debug] [2022-02-16T13:22:07.396Z] Node Version:  v16.14.0
+[debug] [2022-02-16T13:22:07.396Z] Time:          Wed Feb 16 2022 15:22:07 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-02-16T13:22:07.397Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-16T13:22:07.403Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-16T13:22:07.403Z] > authorizing via signed-in user (topcodegr@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\topal\Desktop\Code\PTopalidis\topenergy\server
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-02-16T13:22:49.592Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-02-16T13:22:49.593Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-16T13:22:49.854Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Wed, 16 Feb 2022 13:22:48 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:22:49.863Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"topenergy","name":"topenergy"}
+[debug] [2022-02-16T13:22:50.922Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 16 Feb 2022 13:22:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=819","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:22:50.922Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2022-02-16T13:22:51.130Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:520:28)
+    at Request.emit (node:domain:475:12)
+    at Request.<anonymous> (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:520:28)
+    at Request.emit (node:domain:475:12)
+    at IncomingMessage.<anonymous> (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:639:28)
+    at IncomingMessage.emit (node:events:532:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1346:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID topenergy. Please try again with a unique project ID.
+[debug] [2022-02-16T13:23:00.599Z] ----------------------------------------------------------------------
+[debug] [2022-02-16T13:23:00.601Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-02-16T13:23:00.601Z] CLI Version:   10.2.0
+[debug] [2022-02-16T13:23:00.602Z] Platform:      win32
+[debug] [2022-02-16T13:23:00.602Z] Node Version:  v16.14.0
+[debug] [2022-02-16T13:23:00.602Z] Time:          Wed Feb 16 2022 15:23:00 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-02-16T13:23:00.603Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-16T13:23:00.609Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-16T13:23:00.609Z] > authorizing via signed-in user (topcodegr@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\topal\Desktop\Code\PTopalidis\topenergy\server
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-02-16T13:23:06.750Z] > refreshing access token with scopes: []
+[debug] [2022-02-16T13:23:06.751Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-16T13:23:06.983Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 16 Feb 2022 13:23:06 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:23:06.994Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-02-16T13:23:07.561Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-02-16T13:23:07.561Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2022-02-16T13:23:14.676Z] ----------------------------------------------------------------------
+[debug] [2022-02-16T13:23:14.678Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-02-16T13:23:14.678Z] CLI Version:   10.2.0
+[debug] [2022-02-16T13:23:14.678Z] Platform:      win32
+[debug] [2022-02-16T13:23:14.678Z] Node Version:  v16.14.0
+[debug] [2022-02-16T13:23:14.679Z] Time:          Wed Feb 16 2022 15:23:14 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-02-16T13:23:14.679Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-16T13:23:14.685Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-16T13:23:14.686Z] > authorizing via signed-in user (topcodegr@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\topal\Desktop\Code\PTopalidis\topenergy\server
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-02-16T13:23:34.066Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-02-16T13:23:34.066Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-16T13:23:34.305Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 16 Feb 2022 13:23:33 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:23:34.319Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"tpTopenergy","name":"tpTopenergy"}
+[debug] [2022-02-16T13:23:35.252Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 16 Feb 2022 13:23:34 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=779","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:23:35.252Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2022-02-16T13:23:35.444Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at module.exports (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:520:28)
+    at Request.emit (node:domain:475:12)
+    at Request.<anonymous> (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:520:28)
+    at Request.emit (node:domain:475:12)
+    at IncomingMessage.<anonymous> (C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:639:28)
+    at IncomingMessage.emit (node:events:532:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1346:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2022-02-16T13:23:56.053Z] ----------------------------------------------------------------------
+[debug] [2022-02-16T13:23:56.055Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\topal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-02-16T13:23:56.055Z] CLI Version:   10.2.0
+[debug] [2022-02-16T13:23:56.055Z] Platform:      win32
+[debug] [2022-02-16T13:23:56.055Z] Node Version:  v16.14.0
+[debug] [2022-02-16T13:23:56.056Z] Time:          Wed Feb 16 2022 15:23:56 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-02-16T13:23:56.056Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-16T13:23:56.062Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-16T13:23:56.063Z] > authorizing via signed-in user (topcodegr@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\topal\Desktop\Code\PTopalidis\topenergy\server
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-02-16T13:24:04.870Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"tptopenergy","name":"tptopenergy"}
+[debug] [2022-02-16T13:24:05.958Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Feb 2022 13:24:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=911","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:24:05.960Z] > refreshing access token with scopes: []
+[debug] [2022-02-16T13:24:05.960Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-16T13:24:06.180Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 16 Feb 2022 13:24:05 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:24:06.188Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4915093596096042111 [none]
+[debug] [2022-02-16T13:24:07.285Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4915093596096042111 200
+[debug] [2022-02-16T13:24:07.285Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4915093596096042111 {"name":"operations/cp.4915093596096042111"}
+[debug] [2022-02-16T13:24:07.788Z] [Project Creation Poller] Retrying task index 0
+[debug] [2022-02-16T13:24:07.788Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4915093596096042111 [none]
+[debug] [2022-02-16T13:24:08.922Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4915093596096042111 200
+[debug] [2022-02-16T13:24:08.922Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4915093596096042111 {"name":"operations/cp.4915093596096042111","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"22600675535","projectId":"tptopenergy","lifecycleState":"ACTIVE","name":"tptopenergy","createTime":"2022-02-16T13:24:04.917Z"}}
+[debug] [2022-02-16T13:24:08.923Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-02-16T13:24:08.923Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-16T13:24:09.136Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 16 Feb 2022 13:24:08 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:24:09.146Z] >>> HTTP REQUEST POST https://firebase.googleapis.com/v1beta1/projects/tptopenergy:addFirebase  
+ 
+[debug] [2022-02-16T13:24:12.015Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Feb 2022 13:24:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:24:12.015Z] > refreshing access token with scopes: []
+[debug] [2022-02-16T13:24:12.015Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-16T13:24:12.227Z] <<< HTTP RESPONSE 200 {"date":"Wed, 16 Feb 2022 13:24:11 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-16T13:24:12.236Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz [none]
+[debug] [2022-02-16T13:24:13.012Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz 200
+[debug] [2022-02-16T13:24:13.012Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz {"name":"operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz"}
+[debug] [2022-02-16T13:24:13.516Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2022-02-16T13:24:13.517Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz [none]
+[debug] [2022-02-16T13:24:14.198Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz 200
+[debug] [2022-02-16T13:24:14.198Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz {"name":"operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz"}
+[debug] [2022-02-16T13:24:15.207Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2022-02-16T13:24:15.207Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz [none]
+[debug] [2022-02-16T13:24:16.112Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz 200
+[debug] [2022-02-16T13:24:16.112Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz {"name":"operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz"}
+[debug] [2022-02-16T13:24:18.113Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2022-02-16T13:24:18.114Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz [none]
+[debug] [2022-02-16T13:24:19.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz 200
+[debug] [2022-02-16T13:24:19.051Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz {"name":"operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz"}
+[debug] [2022-02-16T13:24:23.058Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2022-02-16T13:24:23.058Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz [none]
+[debug] [2022-02-16T13:24:23.693Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz 200
+[debug] [2022-02-16T13:24:23.693Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz {"name":"operations/workflows/NmQzZTI1OGEtYmYxNS00NzI4LTkzN2YtOTM0Yjk3Njg2YTkz","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"tptopenergy","projectNumber":"22600675535","displayName":"tptopenergy","name":"projects/tptopenergy","resources":{"hostingSite":"tptopenergy"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: tptopenergy
+[info]    - Project Name: tptopenergy
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/tptopenergy/overview
+[info] i  Using project tptopenergy (tptopenergy) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

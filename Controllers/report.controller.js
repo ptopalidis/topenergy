@@ -7,6 +7,10 @@ const ejs = require('ejs');
 const path = require("path");
 var wkhtmltopdf = require('wkhtmltopdf');
 const nodemailer = require("nodemailer")
+const jsreport = require('@jsreport/jsreport-core')()
+jsreport.use(require('@jsreport/jsreport-ejs')())
+jsreport.use(require('@jsreport/jsreport-chrome-pdf')())
+jsreport.init()
 
 exports.postReport = async(req,res)=>{
 
@@ -56,6 +60,10 @@ exports.reportPDF = async(req,res)=>{
     var glass = await GlassModel.findOne({_id:report.glass});
     var user = await UserModel.findOne({_id:report.user})
 
+    console.log("RENDER")
+    console.log(report)
+    console.log(glass)
+    console.log(user)
     ejs.renderFile(path.join(__dirname,"..","Templates","reportTemplate.ejs"),{report:report,glass:glass,user:user},(err,result)=>{
         if(err){
             console.log(err)
@@ -64,8 +72,27 @@ exports.reportPDF = async(req,res)=>{
         }
         res.setHeader('Content-type', 'application/pdf');
         res.setHeader('Content-Disposition', 'attachment; filename='+"report.pdf"+';');
-     
-        wkhtmltopdf(result).pipe(res);
+      
+        jsreport.render({
+            template: {
+                content: result,
+                engine: 'ejs',
+                recipe: 'chrome-pdf',
+                chrome:{
+                    format:'A4',
+                    marginTop: '0.25in',
+                    marginRight: '0.5in',
+                    marginBottom: '0.25in',
+                    marginLeft: '0.5in'
+                }
+            },
+            data: { name: 'jsreport' }
+        }).then((out) => {
+            res.send(out.content)
+        });
+    
+        
+       // wkhtmltopdf(result).pipe(res);
     })
 }
 
